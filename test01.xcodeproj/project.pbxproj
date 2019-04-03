@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		351260002253CF23008754B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35125FFF2253CF23008754B5 /* AppDelegate.swift */; };
-		351260022253CF23008754B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351260012253CF23008754B5 /* ViewController.swift */; };
 		351260052253CF23008754B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351260032253CF23008754B5 /* Main.storyboard */; };
 		351260072253CF24008754B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 351260062253CF24008754B5 /* Assets.xcassets */; };
 		3512600A2253CF24008754B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 351260082253CF24008754B5 /* LaunchScreen.storyboard */; };
 		351260152253CF24008754B5 /* test01Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351260142253CF24008754B5 /* test01Tests.swift */; };
+		351260202253D149008754B5 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3512601F2253D149008754B5 /* InitialViewController.swift */; };
+		351260232253DBAC008754B5 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351260222253DBAC008754B5 /* Util.swift */; };
+		351260252253DC90008754B5 /* Extension+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351260242253DC90008754B5 /* Extension+ViewController.swift */; };
+		351260272253DE4C008754B5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351260262253DE4C008754B5 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +31,6 @@
 /* Begin PBXFileReference section */
 		35125FFC2253CF23008754B5 /* test01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35125FFF2253CF23008754B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		351260012253CF23008754B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		351260042253CF23008754B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		351260062253CF24008754B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		351260092253CF24008754B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +38,10 @@
 		351260102253CF24008754B5 /* test01Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test01Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		351260142253CF24008754B5 /* test01Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test01Tests.swift; sourceTree = "<group>"; };
 		351260162253CF24008754B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3512601F2253D149008754B5 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		351260222253DBAC008754B5 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		351260242253DC90008754B5 /* Extension+ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+ViewController.swift"; sourceTree = "<group>"; };
+		351260262253DE4C008754B5 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +83,14 @@
 		35125FFE2253CF23008754B5 /* test01 */ = {
 			isa = PBXGroup;
 			children = (
+				351260212253DB95008754B5 /* Utils */,
 				35125FFF2253CF23008754B5 /* AppDelegate.swift */,
-				351260012253CF23008754B5 /* ViewController.swift */,
 				351260032253CF23008754B5 /* Main.storyboard */,
 				351260062253CF24008754B5 /* Assets.xcassets */,
 				351260082253CF24008754B5 /* LaunchScreen.storyboard */,
 				3512600B2253CF24008754B5 /* Info.plist */,
+				3512601F2253D149008754B5 /* InitialViewController.swift */,
+				351260262253DE4C008754B5 /* DetailViewController.swift */,
 			);
 			path = test01;
 			sourceTree = "<group>";
@@ -94,6 +102,15 @@
 				351260162253CF24008754B5 /* Info.plist */,
 			);
 			path = test01Tests;
+			sourceTree = "<group>";
+		};
+		351260212253DB95008754B5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				351260222253DBAC008754B5 /* Util.swift */,
+				351260242253DC90008754B5 /* Extension+ViewController.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +214,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				351260022253CF23008754B5 /* ViewController.swift in Sources */,
+				351260252253DC90008754B5 /* Extension+ViewController.swift in Sources */,
 				351260002253CF23008754B5 /* AppDelegate.swift in Sources */,
+				351260272253DE4C008754B5 /* DetailViewController.swift in Sources */,
+				351260232253DBAC008754B5 /* Util.swift in Sources */,
+				351260202253D149008754B5 /* InitialViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A9G596Z339;
+				DEVELOPMENT_TEAM = 46N6L5J7E4;
 				INFOPLIST_FILE = test01/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -370,7 +390,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cl.athan.test01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -379,7 +399,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A9G596Z339;
+				DEVELOPMENT_TEAM = 46N6L5J7E4;
 				INFOPLIST_FILE = test01/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -388,7 +408,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cl.athan.test01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
